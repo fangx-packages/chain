@@ -18,7 +18,7 @@ func TestNewChain(t *testing.T) {
 }
 
 func NewFoo() FooInterface {
-        return NewChain(
+        return New(
                 func(next interface{}) interface{} {
                         return &f1{FooInterface: next.(FooInterface)}
                 },
